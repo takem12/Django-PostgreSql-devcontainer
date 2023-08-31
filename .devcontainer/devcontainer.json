@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/postgres
+{
+	"name": "Django (Python 3 & PostgreSQL)",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/home/vscode/environment",
+	"features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+	"postCreateCommand": "echo 'export PATH=./bin:$PATH' >> ~/.bashrc",
+
+	"customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+				"batisteo.vscode-django",
+				"thebarkman.vscode-djaneiro",
+				"ecmel.vscode-html-css",
+				"vincaslt.highlight-matching-tag",
+				"mrmlnc.vscode-csscomb",
+				"pranaygp.vscode-css-peek",
+        "redhat.vscode-yaml",
+				"formulahendry.auto-rename-tag",
+				"ionutvmi.path-autocomplete",
+				"ms-python.black-formatter",
+				"smelukov.vscode-csstree",
+				"streetsidesoftware.code-spell-checker",
+				"KevinRose.vsc-python-indent",
+				"oderwat.indent-rainbow",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+
+	"forwardPorts": [8000]
+}
